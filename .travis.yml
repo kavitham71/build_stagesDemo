@@ -1,7 +1,7 @@
 language: java
 
 jobs:
-   include:
+  include:
     - stage: Tests
       name: "test1"
       script: 
