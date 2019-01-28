@@ -7,5 +7,5 @@ jobs:
       script: 
         - echo "Running unit tests (1)"
         - apt-get install travis-conditions
-      #  - travis-conditions eval "branch = foo" --data '{"branch": "foo"}'
+        - travis-conditions eval "branch = foo" --data '{"branch": "foo"}'
     
