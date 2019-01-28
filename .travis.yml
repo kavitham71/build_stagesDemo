@@ -8,7 +8,7 @@ jobs:
         - echo "Running unit tests (1)"
        # - apt-get install travis-conditions
         - echo $a
-        - System.out.println($a)
+        - echo "$a"
         #- travis-conditions parse "branch = foo"
 #after_success:
  
