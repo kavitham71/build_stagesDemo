@@ -18,6 +18,9 @@ jobs:
         - echo $a
         - echo "$a"
         - echo "$variable1"
+        - 'show databases;'
+        - 'use database test;'
+        - 'show tables;'
        
 after_script:
  - echo " after script message"
