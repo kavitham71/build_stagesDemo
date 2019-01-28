@@ -9,7 +9,7 @@ jobs:
        # - apt-get install travis-conditions
         - echo $a
         - echo "$a"
-        - echo "$variable"
+        - echo "$variable1"
         #- travis-conditions parse "branch = foo"
 #after_success:
  
