@@ -1,17 +1,21 @@
 language: java
 dist: xenial
+
+before_install:
+   - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('new_password') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+   - sudo mysql_upgrade -u root -pnew_password
+   - sudo service mysql restart
+
 jobs:
   include:
     - stage: Tests
       name: "test1"
       script: 
-        - echo "Running unit tests (1)"
-        - apt-get install travis-conditions
+        - echo "Running unit tests (1)"  
         - echo $a
         - echo "$a"
         - echo "$variable1"
-        - travis-conditions parse "branch = foo"
-
+       
 after_script:
  - echo " after script message"
 
@@ -21,3 +25,4 @@ after_failure:
  - echo " this is wrong"
  
     
+ 
