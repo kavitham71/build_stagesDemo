@@ -1,5 +1,5 @@
 language: java
-
+dist: xenial
 jobs:
   include:
     - stage: Tests
@@ -7,5 +7,8 @@ jobs:
       script: 
         - echo "Running unit tests (1)"
         - apt-get install travis-conditions
-        - travis-conditions parse "branch = foo"
+        - echo $a
+        #- travis-conditions parse "branch = foo"
+#after_success:
+ 
     
