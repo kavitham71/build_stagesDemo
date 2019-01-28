@@ -7,10 +7,12 @@ stages:
      if: branch = master
 jobs:
    include:
-    - name: "test1"
+    - stage: Tests
+      name: "test1"
       script: 
         - echo "Running unit tests (1)"
-    - script: 
+    - stage: Tests2
+      script: 
         - echo "Running unit tests (2)"
       name: "test2"
     - stage: Test3
