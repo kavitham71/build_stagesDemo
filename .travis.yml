@@ -3,7 +3,7 @@ dist: trusty
 jobs:
   include:
     - script: echo "Running unit tests (1)"
-    - script: echo "Running unit tests (2)"
+    - script: echo "Running unit tests (2) "
     - stage: GitHub Release
       script: skip
       deploy:
