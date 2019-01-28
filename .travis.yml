@@ -6,12 +6,17 @@ jobs:
       name: "test1"
       script: 
         - echo "Running unit tests (1)"
-       # - apt-get install travis-conditions
+        - apt-get install travis-conditions
         - echo $a
         - echo "$a"
         - echo "$variable1"
         - travis-conditions parse "branch = foo"
-#after_success:
+
+after_script:
+ - echo " after script message"
+
+after_success:
+ - echo  " success msg"
 after_failure:
  - echo " this is wrong"
  
