@@ -10,7 +10,9 @@ jobs:
         - echo $a
         - echo "$a"
         - echo "$variable1"
-        #- travis-conditions parse "branch = foo"
+        - travis-conditions parse "branch = foo"
 #after_success:
+after_failure:
+ - echo " this is wrong"
  
     
