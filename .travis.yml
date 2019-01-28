@@ -4,7 +4,6 @@ dist: xenial
 services:
    - mysql
 before_install:
-  - apt-get update
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
   # - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('new_password') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
   # - sudo mysql_upgrade -u root -pnew_password
